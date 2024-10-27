@@ -1,14 +1,12 @@
-// https://github.com/nodejs/node/blob/87170c3f9271da947a7b33d0696ec4cf8aab6eb6/test/parallel/test-runner-string-to-regexp.js
+'use strict';
+const common = require('../common');
+const { deepStrictEqual, throws } = require('node:assert');
+const { convertStringToRegExp } = require('#internal/test_runner/utils');
 
-'use strict'
-const common = require('../common')
-const { deepStrictEqual, throws } = require('node:assert')
-const { convertStringToRegExp } = require('#internal/test_runner/utils')
-
-deepStrictEqual(convertStringToRegExp('foo', 'x'), /foo/)
-deepStrictEqual(convertStringToRegExp('/bar/', 'x'), /bar/)
-deepStrictEqual(convertStringToRegExp('/baz/gi', 'x'), /baz/gi)
-deepStrictEqual(convertStringToRegExp('/foo/9', 'x'), /\/foo\/9/)
+deepStrictEqual(convertStringToRegExp('foo', 'x'), /foo/);
+deepStrictEqual(convertStringToRegExp('/bar/', 'x'), /bar/);
+deepStrictEqual(convertStringToRegExp('/baz/gi', 'x'), /baz/gi);
+deepStrictEqual(convertStringToRegExp('/foo/9', 'x'), /\/foo\/9/);
 
 throws(
   () => convertStringToRegExp('/foo/abcdefghijk', 'x'),
@@ -16,6 +14,6 @@ throws(
     code: 'ERR_INVALID_ARG_VALUE',
     message: "The argument 'x' is an invalid regular expression. " +
              "Invalid flags supplied to RegExp constructor 'abcdefghijk'. " +
-             'Received /foo/abcdefghijk'
+             "Received '/foo/abcdefghijk'",
   })
-)
+);

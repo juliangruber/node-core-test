@@ -1,0 +1,21 @@
+TAP version 13
+# Subtest: should print --test-only diagnostic warning - test-only-true
+    # Subtest: only true in parent test
+    ok 1 - only true in parent test
+      ---
+      duration_ms: *
+      ...
+    1..1
+ok 1 - should print --test-only diagnostic warning - test-only-true
+  ---
+  duration_ms: *
+  ...
+1..1
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms *

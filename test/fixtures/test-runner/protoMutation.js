@@ -1,3 +1,3 @@
-'use strict'
+'use strict';
 
-Object.prototype.skip = true // eslint-disable-line no-extend-native
+Object.prototype.skip = true;
