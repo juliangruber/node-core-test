@@ -15,3 +15,5 @@ This package is a user-land implementation of [`node:test`](https://nodejs.org/a
 - No inherent file watching capabilities.
 - No built-in coverage support.
 - Cannot import external scripts into `run()`-called test files.
+
+For the API reference, see [API.md](API.md).
