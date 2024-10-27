@@ -1,0 +1,20 @@
+node:internal/modules/cjs/loader:1177
+  const err = new Error(`Cannot find module '${request}'`);
+              ^
+
+Error: Cannot find module '/lib/internal/source_map/source_map_cache.js'
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * {
+  code: 'MODULE_NOT_FOUND',
+  path: '/package.json'
+}
+
+Node.js v18.20.4
